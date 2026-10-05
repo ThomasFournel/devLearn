@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+
+$primary: #ff5a00;
+$uiBg: #303030;
+$secondaryBg: #eceff4;
+$bg: #e0e0e0;
+
+body {
+    margin: 0;
+    background-color: $bg;
+    font-family: "Inter";
+    font-weight: 400;
+    height: 500vh;
+    font-size: 1rem;
+}
+
+#hero {
+    background-color: $uiBg;
+    color: white;
+    padding: 16.5vh 0 0 3.75rem;
+    height: 47rem;
+    border-bottom-left-radius: 60px;
+
+    &__title {
+        margin: 0 0 0 -2rem;
+        font-size: 3.9rem;
+    }
+
+    &__under__title {
+        margin: -0.1rem 0 15rem 1.5rem;
+        color: #cf5c1b;
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    &__info {
+        margin: 0 0 12rem 0;
+        font-size: 1.7rem;
+    }
+
+	&__laptop-image-container {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 50rem;
+		width: 52rem;
+    }
+    &__laptop-image {
+        position: absolute;
+        aspect-ratio: 1226/1350;
+        right: 15%;
+        height: 85%;
+        z-index: 1;
+    }
+    &__laptop-background-image {
+        position: absolute;
+        bottom: 3%;
+        left: 1%;
+        aspect-ratio: 865/582;
+        height: 68%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    #hero__laptop-image-container {
+        display: none;
+    }
+}
+
+#bonus {
+    margin: 15% 8.7%;
+	padding: 1.2% 2.3%;
+	border-radius: 1.2rem;
+    box-shadow:
+        2em 2em 2.5em rgba(0, 0, 0, 0.3),
+        -1em -1em 1.5em $secondaryBg
+    ;
+
+    &__title {
+        margin-top: 0;
+        font-size: 2.6rem;
+    }
+    &__under__title {
+        margin: -0.25% 0 10% 0;
+        width: 40%;
+    }
+    &__checklist {
+		div {
+			margin-bottom: 1%;
+			display: flex;
+			gap: 0.25rem;
+			font-size: 0.95rem;
+			ion-icon {
+				font-size: 1.1rem;
+				color: $primary;
+			}
+		}
+		margin-bottom: 3%;
+    }
+	.start_button{
+		scale: 0.8;
+		margin-left: -2%;
+	}
+}
+
+.start_button {
+    user-select: none;
+    background-color: $primary;
+    width: fit-content;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+	gap: 0.5rem;
+	cursor: pointer;
+
+    > span {
+		font-size: 1.2rem;
+        background-color: $bg;
+        color: black;
+        padding: 0.95rem 2.1rem;
+        border-radius: 1rem;
+    }
+
+    ion-icon {
+        width: 2rem;
+        height: auto;
+        aspect-ratio: 1.25;
+		color: white;
+    }
+}
+
+.title {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.under-title {
+    margin: -0.1rem 0 15rem 1.5rem;
+}
+
+.img {
+    user-select: none;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
