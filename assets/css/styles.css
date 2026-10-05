@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+
+:root {
+    --primary: #ff5a00;
+    --uiBg: #303030;
+    --secondaryBg: #eceff4;
+    --bg: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    font-family: "Inter";
+    font-weight: 400;
+    height: 500vh;
+    font-size: 1rem;
+}
+
+#hero-section {
+    background-color: var(--uiBg);
+    color: white;
+    padding: 16.5vh 0 0 3.5%;
+    height: 103vh;
+    border-bottom-left-radius: 60px;
+
+    h1 {
+        margin: 0 0 0 -2%;
+        font-size: 3.9rem;
+    }
+
+    .under-title {
+        margin: -0.25% 0 17% 1.5%;
+        color: #cf5c1b;
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    .info {
+        margin: 0 0 12% 0;
+        font-size: 1.7rem;
+    }
+
+	#laptop-image-container {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 53%;
+		#laptop-image {
+			position: absolute;
+			aspect-ratio: 1226/1350;
+			right: 15%;
+			height: 85%;
+			z-index: 1;
+		}
+		#laptop-background-image {
+			position: absolute;
+			bottom: 3%;
+			left: 1%;
+			aspect-ratio: 865/582;
+			height: 68%;
+		}
+	}
+}
+
+#with-us {
+    margin: 15% 8.7%;
+	padding: 1.2% 2.3%;
+	border-radius: 1.2rem;
+
+	h2 {
+		margin-top: 0;
+        font-size: 2.6rem;
+    }
+
+    box-shadow:
+        2em 2em 2.5em rgba(0, 0, 0, 0.3),
+        -1em -1em 1.5em var(--secondaryBg);
+    .checklist {
+		div {
+			margin-bottom: 1%;
+			display: flex;
+			gap: 0.25rem;
+			font-size: 0.95rem;
+			ion-icon {
+				font-size: 1.1rem;
+				color: var(--primary);
+			}
+		}
+		margin-bottom: 3%;
+    }
+	.under-title {
+        margin: -0.25% 0 10% 0;
+		width: 40%;
+    }
+	#start_button{
+		scale: 0.8;
+		margin-left: -2%;
+	}
+}
+
+#start_button {
+    user-select: none;
+    background-color: var(--primary);
+    width: fit-content;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+	gap: 0.5rem;
+	cursor: pointer;
+
+    > span {
+		font-size: 1.2rem;
+        background-color: var(--bg);
+        color: black;
+        padding: 0.95rem 2.1rem;
+        border-radius: 1rem;
+    }
+
+    ion-icon {
+        width: 2rem;
+        height: auto;
+        aspect-ratio: 1.25;
+		color: white;
+    }
+}
+
+h1,
+h2 {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.img {
+    user-select: none;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
