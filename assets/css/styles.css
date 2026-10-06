@@ -4,8 +4,12 @@ body {
   background-color: #e0e0e0;
   font-family: "Inter";
   font-weight: 400;
-  height: 500vh;
+  height: 600vh;
   font-size: 1rem;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 #hero {
@@ -13,7 +17,7 @@ body {
   color: white;
   padding: 16.5vh 0 0 3.75rem;
   height: 47rem;
-  border-bottom-left-radius: 60px;
+  border-bottom-left-radius: 3.2rem;
 }
 #hero__title {
   margin: 0 0 0 -2rem;
@@ -88,6 +92,101 @@ body {
   margin-left: -2%;
 }
 
+#recommended {
+  background-color: #eceff4;
+  height: 105vh;
+  padding: 5% 0;
+  border-radius: 3rem;
+}
+#recommended__title {
+  margin-top: 0;
+  font-size: 2.8rem;
+  text-align: center;
+}
+#recommended__grid {
+  display: grid;
+  height: 50%;
+  grid-template-columns: repeat(3, 2fr);
+  column-gap: 5%;
+  row-gap: 25%;
+  padding: 5%;
+}
+#recommended__grid .recommended__card {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e0e0;
+  padding: 0 5% 3% 5%;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem #ff5a00;
+}
+#recommended__grid .recommended__card__img {
+  margin: -3.5rem 0 0 0;
+  height: 7rem;
+  aspect-ratio: 1;
+}
+#recommended__grid .recommended__card__name {
+  text-align: end;
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-size: 1.85rem;
+}
+
+#discovery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10%;
+  column-gap: 10%;
+  margin: 10% 10%;
+}
+#discovery .discovery__card {
+  box-shadow: 2em 2em 2.5em rgba(0, 0, 0, 0.3), -1em -1em 1.5em #eceff4;
+  padding: 5%;
+  border-radius: 1.5rem;
+}
+#discovery .discovery__card__title {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  margin: 0 0 2.5% 0;
+}
+#discovery .discovery__card__content {
+  display: flex;
+  height: 50%;
+  gap: 5%;
+  align-items: center;
+}
+#discovery .discovery__card__img {
+  aspect-ratio: 50/34;
+  height: 100%;
+  border-radius: 1rem;
+}
+#discovery .discovery__card .start_button {
+  scale: 0.7;
+  justify-self: end;
+  margin-right: -8%;
+}
+
+#footer {
+  background-color: #303030;
+  color: white;
+  display: flex;
+  height: 100dvh;
+}
+#footer__content .start_button {
+  scale: 0.9;
+  color: black;
+}
+#footer__laptop-image {
+  position: fixed;
+  aspect-ratio: 1226/1350;
+  z-index: 1;
+}
+#footer__laptop-background-image {
+  position: fixed;
+  aspect-ratio: 865/582;
+}
+
 .start_button {
   user-select: none;
   background-color: #ff5a00;
@@ -128,6 +227,7 @@ body {
 .img img {
   height: 100%;
   width: 100%;
+  border-radius: inherit;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -10,8 +10,12 @@ body {
     background-color: $bg;
     font-family: "Inter";
     font-weight: 400;
-    height: 500vh;
+    height: 600vh;
     font-size: 1rem;
+}
+
+.bold {
+    font-weight: 600;
 }
 
 #hero {
@@ -19,7 +23,7 @@ body {
     color: white;
     padding: 16.5vh 0 0 3.75rem;
     height: 47rem;
-    border-bottom-left-radius: 60px;
+    border-bottom-left-radius: 3.2rem;
 
     &__title {
         margin: 0 0 0 -2rem;
@@ -38,12 +42,12 @@ body {
         font-size: 1.7rem;
     }
 
-	&__laptop-image-container {
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 50rem;
-		width: 52rem;
+    &__laptop-image-container {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50rem;
+        width: 52rem;
     }
     &__laptop-image {
         position: absolute;
@@ -61,7 +65,7 @@ body {
     }
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
     #hero__laptop-image-container {
         display: none;
     }
@@ -69,12 +73,11 @@ body {
 
 #bonus {
     margin: 15% 8.7%;
-	padding: 1.2% 2.3%;
-	border-radius: 1.2rem;
+    padding: 1.2% 2.3%;
+    border-radius: 1.2rem;
     box-shadow:
         2em 2em 2.5em rgba(0, 0, 0, 0.3),
-        -1em -1em 1.5em $secondaryBg
-    ;
+        -1em -1em 1.5em $secondaryBg;
 
     &__title {
         margin-top: 0;
@@ -85,22 +88,129 @@ body {
         width: 40%;
     }
     &__checklist {
-		div {
-			margin-bottom: 1%;
-			display: flex;
-			gap: 0.25rem;
-			font-size: 0.95rem;
-			ion-icon {
-				font-size: 1.1rem;
-				color: $primary;
-			}
-		}
-		margin-bottom: 3%;
+        div {
+            margin-bottom: 1%;
+            display: flex;
+            gap: 0.25rem;
+            font-size: 0.95rem;
+            ion-icon {
+                font-size: 1.1rem;
+                color: $primary;
+            }
+        }
+        margin-bottom: 3%;
     }
-	.start_button{
-		scale: 0.8;
-		margin-left: -2%;
-	}
+    .start_button {
+        scale: 0.8;
+        margin-left: -2%;
+    }
+}
+
+#recommended {
+    background-color: $secondaryBg;
+    height: 105vh;
+    padding: 5% 0;
+    border-radius: 3rem;
+
+    &__title {
+        margin-top: 0;
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        height: 50%;
+        grid-template-columns: repeat(3, 2fr);
+        column-gap: 5%;
+        row-gap: 25%;
+        padding: 5%;
+
+        .recommended__card {
+            display: flex;
+            flex-direction: column;
+            background-color: $bg;
+            padding: 0 5% 3% 5%;
+            border-radius: 1rem;
+            box-shadow: 0.1rem 0.1rem 0.5rem $primary;
+
+            &__img {
+                margin: -3.5rem 0 0 0;
+                height: 7rem;
+                aspect-ratio: 1;
+            }
+
+            &__name {
+                text-align: end;
+                font-family: "Kalam", cursive;
+                font-weight: 700;
+                font-size: 1.85rem;
+            }
+        }
+    }
+}
+
+#discovery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10%;
+    column-gap: 10%;
+    margin: 10% 10%;
+
+    .discovery__card {
+        box-shadow:
+            2em 2em 2.5em rgba(0, 0, 0, 0.3),
+            -1em -1em 1.5em $secondaryBg;
+        padding: 5%;
+        border-radius: 1.5rem;
+
+        &__title {
+            font-family: "Kalam", cursive;
+            font-weight: 700;
+            font-size: 2rem;
+            margin: 0;
+            margin: 0 0 2.5% 0;
+        }
+        &__content {
+            display: flex;
+            height: 50%;
+            gap: 5%;
+            align-items: center;
+        }
+        &__img {
+            aspect-ratio: 50/34;
+            height: 100%;
+            border-radius: 1rem;
+        }
+        .start_button {
+            scale: 0.7;
+            justify-self: end;
+            margin-right: -8%;
+        }
+    }
+}
+
+#footer {
+    background-color: $uiBg;
+    color: white;
+    display: flex;
+    height: 100dvh;
+
+    &__content {
+        .start_button {
+            scale: 0.9;
+            color: black;
+        }
+    }
+    &__laptop-image {
+        position:fixed;
+        aspect-ratio: 1226/1350;
+        z-index: 1;
+    }
+    &__laptop-background-image {
+        position:fixed;
+        aspect-ratio: 865/582;
+    }
 }
 
 .start_button {
@@ -110,11 +220,11 @@ body {
     padding: 0.5rem 0.5rem;
     border-radius: 1rem;
     display: flex;
-	gap: 0.5rem;
-	cursor: pointer;
+    gap: 0.5rem;
+    cursor: pointer;
 
     > span {
-		font-size: 1.2rem;
+        font-size: 1.2rem;
         background-color: $bg;
         color: black;
         padding: 0.95rem 2.1rem;
@@ -125,7 +235,7 @@ body {
         width: 2rem;
         height: auto;
         aspect-ratio: 1.25;
-		color: white;
+        color: white;
     }
 }
 
@@ -144,5 +254,6 @@ body {
     img {
         height: 100%;
         width: 100%;
+        border-radius: inherit;
     }
 }
