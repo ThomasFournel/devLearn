@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 body {
   margin: 0;
+  width: 100vw;
   background-color: #e0e0e0;
   font-family: "Inter";
   font-weight: 400;
-  height: 600vh;
   font-size: 1rem;
 }
 
@@ -13,10 +13,11 @@ body {
 }
 
 #hero {
+  position: relative;
   background-color: #303030;
   color: white;
   padding: 16.5vh 0 0 3.75rem;
-  height: 47rem;
+  height: auto;
   border-bottom-left-radius: 3.2rem;
 }
 #hero__title {
@@ -35,33 +36,35 @@ body {
 }
 #hero__laptop-image-container {
   position: absolute;
-  right: 0;
   top: 0;
-  height: 50rem;
-  width: 52rem;
+  right: 1rem;
+  width: min(50vw, 52rem);
+  aspect-ratio: 1;
 }
 #hero__laptop-image {
   position: absolute;
+  top: 4%;
+  right: 10%;
+  width: 75%;
   aspect-ratio: 1226/1350;
-  right: 15%;
-  height: 85%;
   z-index: 1;
 }
 #hero__laptop-background-image {
   position: absolute;
   bottom: 3%;
   left: 1%;
+  width: 100%;
   aspect-ratio: 865/582;
-  height: 68%;
 }
 
-@media screen and (max-width: 1400px) {
+@media (max-width: 1000px) {
   #hero__laptop-image-container {
     display: none;
   }
 }
 #bonus {
-  margin: 15% 8.7%;
+  margin: 15% auto;
+  width: 85%;
   padding: 1.2% 2.3%;
   border-radius: 1.2rem;
   box-shadow: 2em 2em 2.5em rgba(0, 0, 0, 0.3), -1em -1em 1.5em #eceff4;
@@ -94,7 +97,7 @@ body {
 
 #recommended {
   background-color: #eceff4;
-  height: 105vh;
+  height: max-content;
   padding: 5% 0;
   border-radius: 3rem;
 }
@@ -106,10 +109,12 @@ body {
 #recommended__grid {
   display: grid;
   height: 50%;
-  grid-template-columns: repeat(3, 2fr);
-  column-gap: 5%;
-  row-gap: 25%;
-  padding: 5%;
+  max-width: 1900px;
+  width: auto;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, min(400px, 100%));
+  column-gap: 8rem;
+  row-gap: 7rem;
 }
 #recommended__grid .recommended__card {
   display: flex;
@@ -133,7 +138,7 @@ body {
 
 #discovery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, min(400px, 100%));
   row-gap: 10%;
   column-gap: 10%;
   margin: 10% 10%;
@@ -152,13 +157,13 @@ body {
 }
 #discovery .discovery__card__content {
   display: flex;
-  height: 50%;
+  width: 100%;
   gap: 5%;
   align-items: center;
 }
 #discovery .discovery__card__img {
   aspect-ratio: 50/34;
-  height: 100%;
+  width: 100%;
   border-radius: 1rem;
 }
 #discovery .discovery__card .start_button {
@@ -168,25 +173,78 @@ body {
 }
 
 #footer {
+  position: relative;
   background-color: #303030;
   color: white;
-  display: flex;
-  height: 100dvh;
+  overflow: hidden;
 }
-#footer__content .start_button {
+#footer__content {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1.5rem;
+}
+#footer__title {
+  margin-bottom: 17%;
+  text-align: right;
+  font-size: 3.9rem;
+}
+#footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: auto;
+}
+#footer .start_button {
   scale: 0.9;
   color: black;
 }
+#footer__laptop-image-container {
+  position: absolute;
+  top: 15%;
+  width: min(36vw, 34rem);
+  aspect-ratio: 865/582;
+  transform: scaleX(-1);
+}
 #footer__laptop-image {
-  position: fixed;
+  position: absolute;
+  top: -15%;
+  left: -3%;
+  width: 80%;
   aspect-ratio: 1226/1350;
   z-index: 1;
 }
 #footer__laptop-background-image {
-  position: fixed;
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 100%;
   aspect-ratio: 865/582;
 }
 
+@media (max-width: 700px) {
+  #hero__under__title {
+    margin-bottom: 5rem;
+  }
+  #hero__info {
+    margin-bottom: 5rem;
+  }
+  #footer__title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  #footer__bottom {
+    width: 100%;
+  }
+  #footer__laptop-image-container {
+    display: none;
+  }
+}
 .start_button {
   user-select: none;
   background-color: #ff5a00;

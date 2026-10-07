@@ -7,10 +7,10 @@ $bg: #e0e0e0;
 
 body {
     margin: 0;
+    width: 100vw;
     background-color: $bg;
     font-family: "Inter";
     font-weight: 400;
-    height: 600vh;
     font-size: 1rem;
 }
 
@@ -19,10 +19,11 @@ body {
 }
 
 #hero {
+    position: relative;
     background-color: $uiBg;
     color: white;
     padding: 16.5vh 0 0 3.75rem;
-    height: 47rem;
+    height: auto;
     border-bottom-left-radius: 3.2rem;
 
     &__title {
@@ -44,35 +45,39 @@ body {
 
     &__laptop-image-container {
         position: absolute;
-        right: 0;
         top: 0;
-        height: 50rem;
-        width: 52rem;
+        right: 1rem;
+        width: min(50vw, 52rem);
+        aspect-ratio: 1;
     }
     &__laptop-image {
         position: absolute;
-        aspect-ratio: 1226/1350;
-        right: 15%;
-        height: 85%;
+        top: 4%;
+        right: 10%;
+        width: 75%;
+        aspect-ratio: 1226 / 1350;
         z-index: 1;
     }
     &__laptop-background-image {
         position: absolute;
         bottom: 3%;
         left: 1%;
-        aspect-ratio: 865/582;
-        height: 68%;
+        width: 100%;
+        aspect-ratio: 865 / 582;
     }
 }
 
-@media screen and (max-width: 1400px) {
-    #hero__laptop-image-container {
-        display: none;
+@media (max-width: 1000px) {
+    #hero {
+        &__laptop-image-container {
+            display: none;
+        }
     }
 }
 
 #bonus {
-    margin: 15% 8.7%;
+    margin: 15% auto;
+    width: 85%;
     padding: 1.2% 2.3%;
     border-radius: 1.2rem;
     box-shadow:
@@ -108,7 +113,7 @@ body {
 
 #recommended {
     background-color: $secondaryBg;
-    height: 105vh;
+    height: max-content;
     padding: 5% 0;
     border-radius: 3rem;
 
@@ -121,10 +126,12 @@ body {
     &__grid {
         display: grid;
         height: 50%;
-        grid-template-columns: repeat(3, 2fr);
-        column-gap: 5%;
-        row-gap: 25%;
-        padding: 5%;
+        max-width: 1900px;
+        width: auto;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, min(400px, 100%));
+        column-gap: 8rem;
+        row-gap: 7rem;
 
         .recommended__card {
             display: flex;
@@ -152,7 +159,7 @@ body {
 
 #discovery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, min(400px, 100%));
     row-gap: 10%;
     column-gap: 10%;
     margin: 10% 10%;
@@ -173,13 +180,13 @@ body {
         }
         &__content {
             display: flex;
-            height: 50%;
+            width: 100%;
             gap: 5%;
             align-items: center;
         }
         &__img {
             aspect-ratio: 50/34;
-            height: 100%;
+            width: 100%;
             border-radius: 1rem;
         }
         .start_button {
@@ -191,25 +198,87 @@ body {
 }
 
 #footer {
+    position: relative;
     background-color: $uiBg;
     color: white;
-    display: flex;
-    height: 100dvh;
+    overflow: hidden;
 
     &__content {
-        .start_button {
-            scale: 0.9;
-            color: black;
-        }
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+        padding: 1.5rem;
     }
+    &__title {
+        margin-bottom: 17%;
+        text-align: right;
+        font-size: 3.9rem;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        margin-left: auto;
+    }
+
+    .start_button {
+        scale: 0.9;
+        color: black;
+    }
+
+    &__laptop-image-container {
+        position: absolute;
+        top: 15%;
+        width: min(36vw, 34rem);
+        aspect-ratio: 865 / 582;
+        transform: scaleX(-1);
+    }
+
     &__laptop-image {
-        position:fixed;
-        aspect-ratio: 1226/1350;
+        position: absolute;
+        top: -15%;
+        left: -3%;
+        width: 80%;
+        aspect-ratio: 1226 / 1350;
         z-index: 1;
     }
+
     &__laptop-background-image {
-        position:fixed;
-        aspect-ratio: 865/582;
+        position: absolute;
+        bottom: -20%;
+        left: -10%;
+        width: 100%;
+        aspect-ratio: 865 / 582;
+    }
+}
+
+@media (max-width: 700px) {
+    #hero {
+        &__under__title {
+            margin-bottom: 5rem;
+        }
+        &__info {
+            margin-bottom: 5rem;
+        }
+    }
+
+    #footer {
+        &__title {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        &__bottom {
+            width: 100%;
+        }
+        &__laptop-image-container {
+            display: none;
+        }
     }
 }
 
