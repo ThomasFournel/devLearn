@@ -1,0 +1,35 @@
+#presentation {
+    margin: 15% auto;
+    width: 85%;
+    padding: 1.2% 2.3%;
+    border-radius: 1.2em;
+    box-shadow:
+        2em 2em 2.5em rgba(0, 0, 0, 0.3),
+        -1em -1em 1.5em $secondaryBg;
+
+    &__title {
+        margin-top: 0;
+        font-size: 2.6em;
+    }
+    &__under__title {
+        margin: -0.25% 0 10% 0;
+        width: 40%;
+    }
+    &__checklist {
+        div {
+            margin-bottom: 1%;
+            display: flex;
+            gap: 0.25em;
+            font-size: 0.95em;
+            ion-icon {
+                font-size: 1.1em;
+                color: $primary;
+            }
+        }
+        margin-bottom: 3%;
+    }
+    .button {
+        scale: 0.8;
+        margin-left: -2%;
+    }
+}

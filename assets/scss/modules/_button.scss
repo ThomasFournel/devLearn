@@ -1,0 +1,25 @@
+.button {
+    user-select: none;
+    background-color: $primary;
+    width: fit-content;
+    padding: 0.5em 0.5em;
+    border-radius: 1em;
+    display: flex;
+    gap: 0.5em;
+    cursor: pointer;
+
+    > span {
+        font-size: 1.2em;
+        background-color: $bg;
+        color: black;
+        padding: 0.95em 2.1em;
+        border-radius: 1em;
+    }
+
+    ion-icon {
+        width: 2em;
+        height: auto;
+        aspect-ratio: 1.25;
+        color: white;
+    }
+}

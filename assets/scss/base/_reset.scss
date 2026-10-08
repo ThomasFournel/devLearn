@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    width: 100vw;
+    background-color: $bg;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+// phone
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+}

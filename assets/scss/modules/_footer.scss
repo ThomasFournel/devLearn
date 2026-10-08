@@ -1,0 +1,77 @@
+
+#footer {
+    position: relative;
+    background-color: $uiBg;
+    color: white;
+    overflow: hidden;
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 100%;
+        padding: 1.5em;
+    }
+    &__title {
+        margin-bottom: 17%;
+        text-align: right;
+        font-size: 3.9em;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        margin-left: auto;
+    }
+
+    .button {
+        scale: 0.9;
+        color: black;
+    }
+
+    &__laptop-image-container {
+        position: absolute;
+        top: 15%;
+        width: min(36vw, 34em);
+        aspect-ratio: 865 / 582;
+        transform: scaleX(-1);
+    }
+
+    &__laptop-image {
+        position: absolute;
+        top: -15%;
+        left: -3%;
+        width: 80%;
+        aspect-ratio: 1226 / 1350;
+        z-index: 1;
+    }
+
+    &__laptop-background-image {
+        position: absolute;
+        bottom: -20%;
+        left: -10%;
+        width: 100%;
+        aspect-ratio: 865 / 582;
+    }
+}
+
+// phone
+@media (max-width: 768px) {
+    #footer {
+        &__title {
+            font-size: 2.5em;
+            text-align: center;
+        }
+        &__bottom {
+            width: 100%;
+        }
+        &__laptop-image-container {
+            display: none;
+        }
+    }
+}

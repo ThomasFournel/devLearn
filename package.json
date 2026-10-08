@@ -1,8 +1,8 @@
 {
-  "scripts": {
-    "dev": "sass --watch assets/scss:assets/css"
-  },
-  "dependencies": {
-    "sass": "^1.105.1"
-  }
+    "scripts": {
+        "dev": "sass --watch assets/scss:assets/css"
+    },
+    "devDependencies": {
+        "sass": "^1.105.1"
+    }
 }

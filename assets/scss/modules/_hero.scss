@@ -1,0 +1,80 @@
+#hero {
+    position: relative;
+    background-color: $uiBg;
+    color: white;
+    padding: 16.5vh 0 2em 3.75em;
+    height: auto;
+    border-bottom-left-radius: 3.2em;
+
+    &__title {
+        margin: 0 0 0 -0.5em;
+        font-size: 3.9em;
+    }
+
+    &__under__title {
+        margin: -0.1em 0 15em 1.5em;
+        color: #cf5c1b;
+        font-weight: 400;
+        font-size: 1.3em;
+    }
+
+    &__info {
+        margin: 0 0 12em 0;
+        font-size: 1.7em;
+    }
+
+    &__laptop-image-container {
+        position: absolute;
+        top: 0;
+        right: 2em;
+        width: 45em;
+        aspect-ratio: 1;
+    }
+    &__laptop-image {
+        position: absolute;
+        top: 4%;
+        right: 10%;
+        width: 75%;
+        aspect-ratio: 1226 / 1350;
+        z-index: 1;
+    }
+    &__laptop-background-image {
+        position: absolute;
+        bottom: 3%;
+        left: 1%;
+        width: 100%;
+        aspect-ratio: 865 / 582;
+    }
+}
+
+// tablet
+@media (max-width: 992px) {
+    #hero {
+        &__laptop-image-container {
+            display: none;
+        }
+
+        &__under__title {
+            margin-bottom: 5em;
+        }
+        &__info {
+            margin-bottom: 5em;
+        }
+    }
+}
+
+// phone
+@media (max-width: 768px) {
+    #hero {
+        &__title {
+            font-size: 2.5em;
+            margin-left: -1em;
+            text-align: center;
+        }
+        &__under__title {
+            margin: 0 -3.75em 5em 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
